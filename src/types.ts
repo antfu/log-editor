@@ -10,15 +10,7 @@ export interface Options {
    */
   override?: boolean
   /**
-   * File extension, default to `txt` or `json` based on the type of content provided
+   * File extension, default to `log` or `json` based on the type of content provided
    */
   extension?: string
 }
-
-declare global {
-  interface Console {
-    logEditor(content: any, key?: string, options?: Options): Promise<void>
-  }
-}
-
-export {}

@@ -2,14 +2,14 @@ import { promises as fs } from 'fs'
 import temp from 'tempy'
 // @ts-expect-error
 import launch from 'launch-editor'
-import { LogFile } from './types'
+import { Options, LogFile } from './types'
 export * from './types'
 
 const map = new Map<string, LogFile>()
 
-console.logEditor = async(content, key, options = {}) => {
+export async function logEditor(content: any, key?: string, options: Options = {}) {
   const override = options.override ?? true
-  const extension = options.extension ?? (typeof content === 'string' ? 'txt' : 'json')
+  const extension = options.extension ?? (typeof content === 'string' ? 'log' : 'json')
   const stringified = typeof content === 'string' ? content : JSON.stringify(content, null, 2)
 
   let file: LogFile | undefined
