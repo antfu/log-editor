@@ -3,6 +3,7 @@ import temp from 'tempy'
 // @ts-expect-error
 import launch from 'launch-editor'
 import { LogFile } from './types'
+export * from './types'
 
 const map = new Map<string, LogFile>()
 
