@@ -24,7 +24,7 @@ Add the following statement at the very beginning of your script:
 import 'log-editor/console'
 ```
 
-Then use `console.logEditor` instead of `console.log` whenever you want to see the result in editor. It will launch the corresponsing editor powered by [`launch_editor`](https://github.com/yyx990803/launch-editor).
+Then use `console.logEditor` instead of `console.log` whenever you want to see the result in the editor you are using, powered by [`launch_editor`](https://github.com/yyx990803/launch-editor).
 
 ```ts
 console.logEditor(largeObject)
